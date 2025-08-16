@@ -20,7 +20,7 @@ export class UrlRepository {
     return await url.save();
   }
 
-  async findByShortCode(shortUrl: string): Promise<IUrl | null> {
+  async findByShortUrl(shortUrl: string): Promise<IUrl | null> {
     return await Url.findOne({ shortUrl });
   }
 
@@ -47,7 +47,7 @@ export class UrlRepository {
   }
 
   async incrementClicks(shortUrl: string): Promise<void> {
-    await Url.findByIdAndUpdate({ shortUrl }, { $inc: { clicks: 1 } });
+    await Url.findOneAndUpdate({ shortUrl }, { $inc: { clicks: 1 } });
     return;
   }
 
