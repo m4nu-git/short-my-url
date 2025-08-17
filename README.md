@@ -125,20 +125,3 @@ Response:
 
 **GET** `/:shortUrl`
 
----
-
-## 📊 Logging
-
-* **Request Correlation ID**: Every request has a unique ID for tracing logs across services.
-* **Winston structured logs**: Includes metadata (timestamp, level, correlation ID).
-
-Example log:
-
-```json
-{
-  "level": "info",
-  "message": "Short URL created successfully",
-  "correlationId": "6f9d0b3e-1e34-4c9d-a29b",
-  "shortUrl": "aZ3kP"
-}
-```
