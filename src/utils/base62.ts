@@ -15,7 +15,7 @@ export function toBase62(num: number): string {
   return result;
 }
 
-export function fromBAse62(str: string): number {
+export function fromBase62(str: string): number {
   let result = 0;
 
   for (let i = 0; i < str.length; i++) {
